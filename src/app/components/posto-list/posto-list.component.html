@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Lista de Postos de Salvador</h1>
+
+  <div *ngIf="postos.length === 0">
+    <p>Carregando postos...</p>
+  </div>
+
+  <table *ngIf="postos.length > 0">
+    <thead>
+      <tr>
+        <th>Nome do Posto</th>
+        <th>Endereço</th>
+        <th>Bairro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let posto of postos">
+        <td>{{ posto.nome }}</td>
+        <td>{{ posto.endereco }}</td>
+        <td>{{ posto.bairro }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
